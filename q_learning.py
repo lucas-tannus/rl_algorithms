@@ -1,8 +1,6 @@
 import constants
 import matplotlib.pyplot as plt
 import numpy as np
-# Number of success: 180
-# 85394
 
 
 class QLearning(object):
@@ -100,13 +98,13 @@ class QLearning(object):
             current_state = self.get_discrete_state(self.env.reset())
 
             while not done:
-                # self.env.render()
+                self.env.render()
                 action = np.argmax(self.q_table[current_state])
                 new_state, _, done, _ = self.env.step(action)
                 current_state = self.get_discrete_state(new_state)
                 steps += 1
 
-            # print(f'End of game. You achieve {steps} steps')
+            print(f'End of game. You achieve {steps} steps')
             self.env.close()
 
             return steps

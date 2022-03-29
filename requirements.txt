@@ -1,2 +1,4 @@
 gym
 matplot
+tensorflow
+opencv-contrib-python

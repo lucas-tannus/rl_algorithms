@@ -59,6 +59,7 @@ def start():
 
 
 if __name__ == '__main__':
-    # start()
-    env = gym.make('CarRacing-v0')
-    print(env.reset())
+    start()
+    # gym.logger.set_level(40)
+    # env = gym.make('CarRacing-v0')
+    # print(env.action_space)
